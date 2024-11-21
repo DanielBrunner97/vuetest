@@ -1,32 +1,73 @@
 <template>
-<div class="row">
+  <div class="row">
+      <div class="col-md-3">
+          <h3>
+              <span class="custom-text-primary">DANIEL </span>
+              <span class="custom-text-primarybackground">BRUNNER</span>
+          </h3>
+      </div>
 
-    <div class="col-md-3">
-        <h4>DANIEL BRUNNER</h4>
-    </div>
+      <div class="col-md-9">
+          <div class="row justify-content-end">
+              <div class="col-md-3">
+                  <button
+                      class="btn border-0"
+                      :class="{ 'custom-active-link': currentPage === 'aboutme' }"
+                      @click="navigateTo('aboutme')"
+                  >
+                  <h3 class="grow-on-hover" :class="{ 'custom-active-link': currentPage === 'aboutme' }">
+                      ABOUT ME
+                  </h3>
+                  </button>
+              </div>
 
-    <div class="col-md-9">
-        <div class="row justify-content-end">
-            <div class="col-md-3">
-                <h4>ABOUT ME</h4>
-            </div>
+              <div class="col-md-3">
+                  <button
+                      class="btn border-0"
+                      :class="{ 'custom-active-link': currentPage === 'work' }"
+                      @click="navigateTo('work')"
+                  >
+                      <h3 class="grow-on-hover" :class="{ 'custom-active-link': currentPage === 'work' }">
+                          WORK
+                      </h3>
+                  </button>
+              </div>
 
-            <div class="col-md-3">
-                <h4>WORK</h4>
-            </div>
+              <div class="col-md-3 ">
+                  <button
+                      class="btn border-0 "
+                      :class="{ 'custom-active-link': currentPage === 'contacts' }"
+                      @click="navigateTo('contacts')"
+                  >
+                      <h3 class="grow-on-hover" :class="{ 'custom-active-link': currentPage === 'contacts' }">
+                          CONTACTS
+                      </h3>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+  </template>
 
-            <div class="col-md-3">
-                <h4>CONTACTS</h4>
-            </div>
-        </div>
+  <script>
+  import { ref } from 'vue';
+  import { useRouter } from 'vue-router';
 
-    </div>
+  export default {
+      name: 'NavbarComponent',
+      setup() {
+          const currentPage = ref('aboutme');
+          const router = useRouter();
 
-</div>
-</template>
+          const navigateTo = (page) => {
+              currentPage.value = page;
+              router.push(`/${page}`); // Navigate to the corresponding route
+          };
 
-<script>
-export default {
-    name: 'NavbarComponent',
-};
-</script>
+          return {
+              currentPage,
+              navigateTo,
+          };
+      },
+  };
+  </script>

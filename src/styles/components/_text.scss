@@ -1,0 +1,15 @@
+.custom-text-primary {
+    color: $color-primary; /* Replace with your desired color */
+  }
+
+.custom-text-primarybackground {
+    color: white;
+    background-color: $color-primary; /* Replace with your desired background color */
+    padding: 0 5px; /* Optional: Adds some padding around the text */
+    border-radius: 3px; /* Optional: Rounds the corners of the background */
+}
+
+.custom-active-link {
+    text-decoration: underline;
+    text-decoration-color: $color-primary;
+  }

@@ -1,18 +1,17 @@
+<!-- App.vue -->
 <template>
-  <AboutMeView/>
+  <DefaultLayout />
 </template>
 
 <script>
-
-import AboutMeView from './views/AboutMeView.vue'
-
+import DefaultLayout from '@/layout/DefaultLayout.vue';
 
 export default {
   name: 'App',
   components: {
-    AboutMeView
-  }
-}
+    DefaultLayout,
+  },
+};
 </script>
 
 <style>

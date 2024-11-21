@@ -1,0 +1,26 @@
+ /* Optional: If you want to target only specific buttons, add a custom class */
+ .grow-on-hover {
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    will-change: transform;
+  }
+
+  .grow-on-hover:hover {
+    transform: scale(1.3);
+    /* Optional: Change background color on hover */
+    /* background-color: #f0f0f0; */
+  }
+
+  .grow-enter-active,
+  .grow-leave-active {
+    transition: transform 0.4s ease;
+  }
+
+  .grow-enter-from,
+  .grow-leave-to {
+    transform: scale(1);
+  }
+
+  .grow-enter-to,
+  .grow-leave-from {
+    transform: scale(1.1);
+  }
