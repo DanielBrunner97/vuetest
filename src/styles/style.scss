@@ -1,0 +1,24 @@
+@import 'utils/_variables.scss';
+
+@import 'components/_navbar.scss';
+@import 'components/_buttons.scss';
+@import 'components/_images.scss';
+
+
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+* {
+    font-family: "League Gothic", sans-serif;
+  }
+
+
+$theme-colors: (
+    "primary": $color-primary,
+);
+
+@import "bootstrap/scss/bootstrap";
+
+
+
+
+@import 'forms/_form-floating.scss';

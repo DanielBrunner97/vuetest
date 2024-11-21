@@ -1,0 +1,38 @@
+/* Custom Styles for Form Floating */
+.custom-form-floating {
+    position: relative;
+
+    .form-control {
+      height: 5.5rem; /* Explicit height */
+      border-radius: 50px; /* Rounded corners */
+      border-width: 2px; /* Thicker border */
+      padding: 0; /* Remove default padding */
+      text-align: center; /* Center text horizontally */
+      font-size: 1.25rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-control:focus {
+      border-color: $color-primary !important;
+      box-shadow: 0 0 0 0.25rem rgba($color-primary, 0.25);
+    }
+
+    label {
+      color: #6c757d; /* Default label color */
+      font-size: 1.5rem; /* Increased font size */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Center label horizontally and vertically */
+      pointer-events: none; /* Prevent interaction */
+      transition: color 0.3s ease, top 0.3s ease, transform 0.3s ease, font-size 0.3s ease;
+    }
+
+    .form-control:focus + label,
+    .form-control:not(:placeholder-shown) + label {
+      top: -0.5rem; /* Move label above input */
+      transform: translate(-50%, 0); /* Center horizontally, no vertical shift */
+      font-size: 1rem; /* Smaller font size when floating */
+      color: $color-primary !important; /* Highlight color */
+    }
+  }
