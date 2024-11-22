@@ -1,15 +1,51 @@
 .custom-text-primary {
-    color: $color-primary; /* Replace with your desired color */
+    background: linear-gradient(135deg, $color-primary-lighter, $color-primary-dark);
+    /* Use background-clip to clip the background to the text */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Make the text transparent to reveal the background */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    /* Optional: Ensure the text is rendered correctly */
+    display: inline-block;
   }
 
 .custom-text-primarybackground {
     color: white;
-    background-color: $color-primary; /* Replace with your desired background color */
+    background: linear-gradient(135deg, $color-primary-lighter, $color-primary-dark);
     padding: 0 5px; /* Optional: Adds some padding around the text */
     border-radius: 3px; /* Optional: Rounds the corners of the background */
 }
 
 .custom-active-link {
-    text-decoration: underline;
-    text-decoration-color: $color-primary;
+/*     text-decoration: underline;
+    text-decoration-color: $color-primary; */
   }
+
+/* Ensure the parent element is positioned relative */
+h3 {
+    position: relative;
+    color: white !important;
+  }
+
+/* Base style for the underline */
+h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Start from the right */
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: $color-primary; /* Use your primary color variable */
+    transform: scaleX(0); /* Start with no width */
+    transform-origin: left; /* Animate from right to left */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Apply the animation when the class is active */
+h3.custom-active-link::after {
+    transform: scaleX(1); /* Expand to full width */
+}
+
