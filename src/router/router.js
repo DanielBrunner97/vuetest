@@ -2,8 +2,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import DefaultLayout from '@/layout/DefaultLayout.vue';
-import AboutMeLeft from '@/views/AboutMeView/AboutMeLeft.vue';
-import AboutMeRight from '@/views/AboutMeView/AboutMeRight.vue';
+import AboutMeView from '@/views/AboutMeView/AboutMeView.vue';
 
 const routes = [
   {
@@ -15,8 +14,7 @@ const routes = [
     name: 'aboutme',
     components: {
       default: DefaultLayout, // Render DefaultLayout in the default <router-view />
-      left: AboutMeLeft,       // Render AboutMeLeft in <router-view name="left" />
-      right: AboutMeRight,     // Render AboutMeRight in <router-view name="right" />
+      content: AboutMeView,       // Render AboutMeLeft in <router-view name="left" />
     },
   },
 ];

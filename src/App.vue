@@ -1,6 +1,9 @@
 <!-- App.vue -->
 <template>
-  <DefaultLayout />
+  <PerfectScrollbar style="height: 100vh">
+    <DefaultLayout />
+  </PerfectScrollbar>
+
 </template>
 
 <script>
@@ -20,6 +23,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: white;
-  background: linear-gradient(35deg,rgb(43, 39, 104), rgb(55, 51, 116), rgb(108, 83, 209));
 }
+html, body {
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  background: linear-gradient(35deg, rgb(43, 39, 104), rgb(55, 51, 116), rgb(108, 83, 209));
+  background-size: cover; /* Ensures the gradient stretches to cover the screen */
+  background-repeat: no-repeat; /* Prevents the gradient from repeating */
+  background-attachment: fixed; /* Keeps the gradient fixed while scrolling */
+}
+
+
 </style>

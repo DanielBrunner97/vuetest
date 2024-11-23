@@ -25,13 +25,13 @@
   }
 
 /* Ensure the parent element is positioned relative */
-h3 {
+h2 {
     position: relative;
     color: white !important;
   }
 
 /* Base style for the underline */
-h3::after {
+h2::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -45,7 +45,7 @@ h3::after {
 }
 
 /* Apply the animation when the class is active */
-h3.custom-active-link::after {
+h2.custom-active-link::after {
     transform: scaleX(1); /* Expand to full width */
 }
 

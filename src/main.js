@@ -4,6 +4,8 @@ import App from './App.vue'
 import "bootstrap"
 import './styles/style.scss';
 import router from './router/router.js';
+import { PerfectScrollbarPlugin } from 'vue3-perfect-scrollbar';
+import 'vue3-perfect-scrollbar/style.css';
 
 
 
@@ -11,5 +13,5 @@ import router from './router/router.js';
 const app = createApp(App);
 
 app.use(router);
-
+app.use(PerfectScrollbarPlugin);
 app.mount('#app');
