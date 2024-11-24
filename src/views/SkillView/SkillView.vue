@@ -23,7 +23,7 @@
 
 
 <script>
-import SkillComponent from '@/views/SkillView/fragements/SkillComponent.vue';
+import SkillComponent from '@/views/SkillView/fragments/SkillComponent.vue';
 import {
     ref
 } from 'vue';

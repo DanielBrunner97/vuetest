@@ -4,6 +4,9 @@ import { createRouter, createWebHistory } from 'vue-router';
 import DefaultLayout from '@/layout/DefaultLayout.vue';
 import AboutMeView from '@/views/AboutMeView/AboutMeView.vue';
 import SkillView from '@/views/SkillView/SkillView.vue';
+import ContactView from '@/views/ContactView/ContactView.vue';
+
+
 
 const routes = [
   {
@@ -24,6 +27,14 @@ const routes = [
     components: {
       default: DefaultLayout, // Render DefaultLayout in the default <router-view />
       content: SkillView,       // Render AboutMeLeft in <router-view name="left" />
+    },
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    components: {
+      default: DefaultLayout, // Render DefaultLayout in the default <router-view />
+      content: ContactView,       // Render AboutMeLeft in <router-view name="left" />
     },
   },
 ];

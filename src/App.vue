@@ -19,9 +19,18 @@ export default {
 
 <style>
 #app {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+  }
+  input:-webkit-autofill {
+    -webkit-text-fill-color: #ffffff;
+  }
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: white;
 }
 html, body {

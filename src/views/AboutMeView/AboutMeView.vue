@@ -31,8 +31,8 @@
 </style>
 
 <script>
-import JumboTron from '@/views/AboutMeView/fragements/Jumbotron.vue';
-import LebenslaufComponent from '@/views/AboutMeView/fragements/LebenslaufComponent.vue';
+import JumboTron from '@/views/AboutMeView/fragments/Jumbotron.vue';
+import LebenslaufComponent from '@/views/AboutMeView/fragments/LebenslaufComponent.vue';
 import AvatarComponent from '@/components/AvatarComponent.vue';
 
 export default {

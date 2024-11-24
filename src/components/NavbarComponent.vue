@@ -1,69 +1,69 @@
 <template>
-    <div class="row">
-      <div class="col-md-3">
-        <h2>
-          <span class="custom-text-primary">DANIEL </span>
-          <span class="custom-text-primarybackground">BRUNNER</span>
-        </h2>
-      </div>
+  <div class="row">
+    <div class="col-md-3">
+      <h2>
+        <span class="custom-text-primary">DANIEL </span>
+        <span class="custom-text-primarybackground">BRUNNER</span>
+      </h2>
+    </div>
 
-      <div class="col-md-9">
-        <div class="row justify-content-end">
-          <div class="col-md-3">
-            <button
-              class="btn border-0"
+    <div class="col-md-9">
+      <!-- Updated classes for responsive alignment -->
+      <div class="row justify-content-center justify-content-md-end">
+        <div class="col-12 col-md-3 d-flex justify-content-center">
+          <button
+            class="btn border-0"
+            :class="{ 'custom-active-link': currentPage === 'aboutme' }"
+            @click="navigateTo('aboutme')"
+            @mouseenter="isHovered = true"
+            @mouseleave="isHovered = false"
+          >
+            <h2
+              class="grow-on-hover"
               :class="{ 'custom-active-link': currentPage === 'aboutme' }"
-              @click="navigateTo('aboutme')"
-              @mouseenter="isHovered = true"
-              @mouseleave="isHovered = false"
             >
-              <h2
-                class="grow-on-hover"
-                :class="{ 'custom-active-link': currentPage === 'aboutme' }"
-              >
-                ABOUT ME
-              </h2>
-            </button>
-          </div>
+              ABOUT ME
+            </h2>
+          </button>
+        </div>
 
-          <div class="col-md-3">
-            <button
-              class="btn border-0"
+        <div class="col-12 col-md-3 d-flex justify-content-center">
+          <button
+            class="btn border-0"
+            :class="{ 'custom-active-link': currentPage === 'skills' }"
+            @click="navigateTo('skills')"
+            @mouseenter="isHovered = true"
+            @mouseleave="isHovered = false"
+          >
+            <h2
+              class="grow-on-hover"
               :class="{ 'custom-active-link': currentPage === 'skills' }"
-              @click="navigateTo('skills')"
-              @mouseenter="isHovered = true"
-              @mouseleave="isHovered = false"
             >
-              <h2
-                class="grow-on-hover"
-                :class="{ 'custom-active-link': currentPage === 'skills' }"
-              >
-                SKILLS
-              </h2>
-            </button>
-          </div>
+              SKILLS
+            </h2>
+          </button>
+        </div>
 
-          <div class="col-md-3">
-            <button
-              class="btn border-0"
-              :class="{ 'custom-active-link': currentPage === 'contacts' }"
-              @click="navigateTo('contacts')"
-              @mouseenter="isHovered = true"
-              @mouseleave="isHovered = false"
+        <div class="col-12 col-md-3 d-flex justify-content-center">
+          <button
+            class="btn border-0"
+            :class="{ 'custom-active-link': currentPage === 'contact' }"
+            @click="navigateTo('contact')"
+            @mouseenter="isHovered = true"
+            @mouseleave="isHovered = false"
+          >
+            <h2
+              class="grow-on-hover"
+              :class="{ 'custom-active-link': currentPage === 'contact' }"
             >
-              <h2
-                class="grow-on-hover"
-                :class="{ 'custom-active-link': currentPage === 'contacts' }"
-              >
-                CONTACTS
-              </h2>
-            </button>
-          </div>
+              CONTACT
+            </h2>
+          </button>
         </div>
       </div>
     </div>
-  </template>
-
+  </div>
+</template>
   <script>
   import { ref, watch } from 'vue';
   import { useRouter, useRoute } from 'vue-router';
