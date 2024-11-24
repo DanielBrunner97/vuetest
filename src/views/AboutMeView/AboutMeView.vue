@@ -14,16 +14,14 @@
 </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .avatar-container {
     position: relative;
-
     z-index: 2;
 }
 
 .jumbotron-container {
     position: relative;
-
     z-index: 1;
 }
 
@@ -33,8 +31,8 @@
 </style>
 
 <script>
-import JumboTron from '@/components/Jumbotron.vue';
-import LebenslaufComponent from '@/components/LebenslaufComponent.vue';
+import JumboTron from '@/views/AboutMeView/fragements/Jumbotron.vue';
+import LebenslaufComponent from '@/views/AboutMeView/fragements/LebenslaufComponent.vue';
 import AvatarComponent from '@/components/AvatarComponent.vue';
 
 export default {

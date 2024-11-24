@@ -19,9 +19,9 @@
             </div>
 
             <div class="col-md-3">
-                <button class="btn border-0" :class="{ 'custom-active-link': currentPage === 'work' }" @click="navigateTo('work')">
-                    <h2 class="grow-on-hover" :class="{ 'custom-active-link': currentPage === 'work' }">
-                        WORK
+                <button class="btn border-0" :class="{ 'custom-active-link': currentPage === 'skills' }" @click="navigateTo('skills')">
+                    <h2 class="grow-on-hover" :class="{ 'custom-active-link': currentPage === 'skills' }">
+                        SKILLS
                     </h2>
                 </button>
             </div>

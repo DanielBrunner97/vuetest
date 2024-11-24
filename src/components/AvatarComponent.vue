@@ -4,9 +4,9 @@
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .avatar {
-    background: linear-gradient(135deg, #155f3e, #33a06f, #42b883, #42d392, #35eb9a);
+    background: linear-gradient(135deg, #155f3e, #33a06f, $color-primary, #42d392, #35eb9a);
     width: 350px;
     height: 350px;
     border-radius: 50%;

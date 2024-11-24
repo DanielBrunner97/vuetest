@@ -12,7 +12,7 @@
 </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .background-container {
     position: relative;
     background-image: url('@/assets/animatedBG.svg');

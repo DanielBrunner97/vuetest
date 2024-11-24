@@ -62,7 +62,7 @@
   };
   </script>
 
-  <style scoped>
+  <style lang="scss" scoped>
   /* Timeline Container */
   .timeline {
     display: flex;
@@ -97,7 +97,7 @@
   .timeline-circle {
     width: 140px;
     height: 140px;
-    background-color: #42b883;
+    background-color: $color-primary;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -117,7 +117,7 @@
     transform: translateX(-50%);
     width: 4px;
     height: calc(100% - 35px); /* Extend the line to the bottom of the marker */
-    background-color: #42b883;
+    background-color: $color-primary;
     z-index: 0;
   }
 
@@ -125,7 +125,7 @@
   .timeline-content {
     border-radius: 10px;
     max-width: 80%;
-    background-color: #42b8832a;
+    background-color: rgba($color-primary, 0.2);
     flex-grow: 1;
     box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.274);
     margin-top: 7%;
@@ -139,7 +139,7 @@
   .timeline-content:hover {
     transform: scale(1.15);
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
-    border: 2px solid #42b883; /* Add a border to simulate growth */
+    border: 2px solid $color-primary; /* Add a border to simulate growth */
     cursor: pointer; /* Change cursor to pointer on hover */
   }
 
@@ -157,8 +157,4 @@
     }
   }
 
-  /* Optional: Ensure animations start only when elements are in view */
-  .animated-item {
-    /* This class is used to apply the animation */
-  }
   </style>

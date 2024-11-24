@@ -18,10 +18,10 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 
 .box {
-  background: radial-gradient(circle at 50% 0, #0000 25%, #42b8832a calc(10% + 2px));
+  background: radial-gradient(circle at 50% 0, #0000 25%, rgba($color-primary, 0.2) calc(10% + 2px));
   box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.274);
   padding: 20px;
   max-width: 80%;
@@ -42,7 +42,7 @@
 h1 {
   margin-bottom: 10px;
   font-size: 1.5em;
-  color: #42b883;
+  color: $color-primary;
 }
 
 p {
